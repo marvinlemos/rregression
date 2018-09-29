@@ -1,2 +1,2 @@
 # rregression
-A gentle introduction to Regression technique using R Language
+A gentle introduction to Linear Regression using R Language
