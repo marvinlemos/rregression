@@ -1,6 +1,4 @@
-library(dplyr)
-
-SYS_DATE = format(Sys.time(), "%Y%m%d%H%M%S")
+SYS_DATE = format(Sys.time(), "%Y%m%d%_H%M%S")
 
 # Constants used in the rest of the code
 DATASET_FILENAME = 'datasets/housing.csv'
@@ -21,9 +19,9 @@ if (length(COLUMNS_TO_REMOVE) > 0){
 }
 
 # Training the multiple linear model
-formula.lm = as.formula(paste0(PREDICTED_COLUMN, " ~ ."))
-model.lm = lm(formula.lm, data = houses.df)
+linear.formula = as.formula(paste0(PREDICTED_COLUMN, " ~ ."))
+linear.model = lm(linear.formula, data = houses.df)
 
-save(model.lm, file = MODEL_FILENAME)
+save(linear.model, file = MODEL_FILENAME)
 
 
